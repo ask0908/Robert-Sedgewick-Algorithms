@@ -1,5 +1,3 @@
-package util;
-
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
@@ -25,7 +23,7 @@ public class Out {
     // force Unicode UTF-8 encoding; otherwise it's system dependent
     private static final String CHARSET_NAME = "UTF-8";
 
-    // assume language = English, country = US for consistency with util.In
+    // assume language = English, country = US for consistency with In
     private static final Locale LOCALE = Locale.US;
 
     private PrintWriter out;

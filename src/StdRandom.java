@@ -1,10 +1,8 @@
-package util;
-
 import java.util.Random;
 
 /**
  *  <p><b>Overview.</b>
- *  The {@code util.StdRandom} class provides static methods for generating
+ *  The {@code StdRandom} class provides static methods for generating
  *  random number from various discrete and continuous distributions,
  *  including uniform, Bernoulli, geometric, Gaussian, exponential, Pareto,
  *  Poisson, and Cauchy. It also provides method for shuffling an

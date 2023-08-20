@@ -1,5 +1,3 @@
-package util;
-
 import java.io.BufferedOutputStream;
 import java.io.IOException;
 
@@ -12,8 +10,8 @@ import java.io.IOException;
  *  <p>
  *  The client must {@code flush()} the output stream when finished writing bits.
  *  <p>
- *  The client should not intermix calls to {@code util.BinaryStdOut} with calls
- *  to {@code util.StdOut} or {@code System.out}; otherwise unexpected behavior
+ *  The client should not intermix calls to {@code BinaryStdOut} with calls
+ *  to {@code StdOut} or {@code System.out}; otherwise unexpected behavior
  *  will result.
  *
  *  @author Robert Sedgewick
@@ -23,12 +21,12 @@ public final class BinaryStdOut {
     private static BufferedOutputStream out;  // output stream (standard output)
     private static int buffer;                // 8-bit buffer of bits to write
     private static int n;                     // number of bits remaining in buffer
-    private static boolean isInitialized;     // has util.BinaryStdOut been called for first time?
+    private static boolean isInitialized;     // has BinaryStdOut been called for first time?
 
     // don't instantiate
     private BinaryStdOut() { }
 
-    // initialize util.BinaryStdOut
+    // initialize BinaryStdOut
     private static void initialize() {
         out = new BufferedOutputStream(System.out);
         buffer = 0;

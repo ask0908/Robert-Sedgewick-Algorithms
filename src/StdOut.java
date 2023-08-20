@@ -1,6 +1,6 @@
-package util; /******************************************************************************
- *  Compilation:  javac util.StdOut.java
- *  Execution:    java util.StdOut
+/******************************************************************************
+ *  Compilation:  javac StdOut.java
+ *  Execution:    java StdOut
  *  Dependencies: none
  *
  *  Writes data of various types to standard output.
@@ -14,41 +14,41 @@ import java.util.Locale;
 
 /**
  *  <p><b>Overview.</b>
- *  The {@code util.StdOut} class provides methods for printing strings and numbers
+ *  The {@code StdOut} class provides methods for printing strings and numbers
  *  to standard output.
  *
  *  <p><b>Getting started.</b>
- *  To use this class, you must have {@code util.StdOut.class} in your
+ *  To use this class, you must have {@code StdOut.class} in your
  *  Java classpath. If you used our autoinstaller, you should be all set.
  *  Otherwise, either download
  *  <a href = "https://introcs.cs.princeton.edu/java/code/stdlib.jar">stdlib.jar</a>
  *  and add to your Java classpath or download
- *  <a href = "https://introcs.cs.princeton.edu/java/stdlib/StdOut.java">util.StdOut.java</a>
+ *  <a href = "https://introcs.cs.princeton.edu/java/stdlib/StdOut.java">StdOut.java</a>
  *  and put a copy in your working directory.
  *  <p>
- *  Here is an example program that uses {@code util.StdOut}:
+ *  Here is an example program that uses {@code StdOut}:
  *  <pre>
  *   public class TestStdOut {
  *       public static void main(String[] args) {
  *           int a = 17;
  *           int b = 23;
  *           int sum = a + b;
- *           util.StdOut.println("Hello, World");
- *           util.StdOut.printf("%d + %d = %d\n", a, b, sum);
+ *           StdOut.println("Hello, World");
+ *           StdOut.printf("%d + %d = %d\n", a, b, sum);
  *       }
  *   }
  *  </pre>
  *  <p>
  *  <b>Differences with System.out.</b>
- *  The behavior of {@code util.StdOut} is similar to that of {@link System#out},
+ *  The behavior of {@code StdOut} is similar to that of {@link System#out},
  *  but there are a few technical differences:
  *  <ul>
- *  <li> {@code util.StdOut} coerces the character-set encoding to UTF-8,
+ *  <li> {@code StdOut} coerces the character-set encoding to UTF-8,
  *       which is a standard character encoding for Unicode.
- *  <li> {@code util.StdOut} coerces the locale to {@link Locale#US},
+ *  <li> {@code StdOut} coerces the locale to {@link Locale#US},
  *       for consistency with {@link StdIn}, {@link Double#parseDouble(String)},
  *       and floating-point literals.
- *  <li> {@code util.StdOut} <em>flushes</em> standard output after each call to
+ *  <li> {@code StdOut} <em>flushes</em> standard output after each call to
  *       {@code print()} so that text will appear immediately in the terminal.
  *  </ul>
  *  <p>
@@ -66,7 +66,7 @@ public final class StdOut {
     // force Unicode UTF-8 encoding; otherwise it's system dependent
     private static final String CHARSET_NAME = "UTF-8";
 
-    // assume language = English, country = US for consistency with util.StdIn
+    // assume language = English, country = US for consistency with StdIn
     private static final Locale LOCALE = Locale.US;
 
     // send output here
@@ -299,7 +299,7 @@ public final class StdOut {
     }
 
     /**
-     * Unit tests some methods in {@code util.StdOut}.
+     * Unit tests some methods in {@code StdOut}.
      *
      * @param args the command-line arguments
      */

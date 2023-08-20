@@ -1,5 +1,3 @@
-package util;
-
 /**
  *  <i>Standard array IO</i>. This class provides methods for reading
  *  in 1D and 2D arrays from standard input and printing out to

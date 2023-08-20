@@ -1,5 +1,3 @@
-package util;
-
 import javax.sound.sampled.Clip;
 
 import java.io.File;

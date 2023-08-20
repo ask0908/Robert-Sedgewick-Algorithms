@@ -1,5 +1,3 @@
-package util;
-
 import java.io.BufferedInputStream;
 import java.io.File;
 import java.io.FileInputStream;
@@ -45,7 +43,7 @@ import java.util.regex.Pattern;
  */
 public final class In {
 
-    ///// begin: section (1 of 2) of code duplicated from util.In to util.StdIn.
+    ///// begin: section (1 of 2) of code duplicated from In to StdIn.
 
     // assume Unicode UTF-8 encoding
     private static final String CHARSET_NAME = "UTF-8";
@@ -64,7 +62,7 @@ public final class In {
     // http://weblogs.java.net/blog/pat/archive/2004/10/stupid_scanner_1.html
     private static final Pattern EVERYTHING_PATTERN = Pattern.compile("\\A");
 
-    //// end: section (1 of 2) of code duplicated from util.In to util.StdIn.
+    //// end: section (1 of 2) of code duplicated from In to StdIn.
 
     private Scanner scanner;
 
@@ -125,7 +123,7 @@ public final class In {
     public In(File file) {
         if (file == null) throw new IllegalArgumentException("file argument is null");
         try {
-            // for consistency with util.StdIn, wrap with BufferedInputStream instead of use
+            // for consistency with StdIn, wrap with BufferedInputStream instead of use
             // file as argument to Scanner
             FileInputStream fis = new FileInputStream(file);
             scanner = new Scanner(new BufferedInputStream(fis), CHARSET_NAME);
@@ -152,7 +150,7 @@ public final class In {
             // first try to read file from local file system
             File file = new File(name);
             if (file.exists()) {
-                // for consistency with util.StdIn, wrap with BufferedInputStream instead of use
+                // for consistency with StdIn, wrap with BufferedInputStream instead of use
                 // file as argument to Scanner
                 FileInputStream fis = new FileInputStream(file);
                 scanner = new Scanner(new BufferedInputStream(fis), CHARSET_NAME);
@@ -212,7 +210,7 @@ public final class In {
         return scanner != null;
     }
 
-    ////  begin: section (2 of 2) of code duplicated from util.In to util.StdIn,
+    ////  begin: section (2 of 2) of code duplicated from In to StdIn,
     ////  with all methods changed from "public" to "public static".
 
     /**
@@ -282,7 +280,7 @@ public final class In {
         scanner.useDelimiter(EMPTY_PATTERN);
         try {
             String ch = scanner.next();
-            assert ch.length() == 1 : "Internal (Std)util.In.readChar() error!"
+            assert ch.length() == 1 : "Internal (Std)In.readChar() error!"
                     + " Please contact the authors.";
             scanner.useDelimiter(WHITESPACE_PATTERN);
             return ch.charAt(0);
@@ -566,7 +564,7 @@ public final class In {
         return vals;
     }
 
-    ///// end: section (2 of 2) of code duplicated from util.In to util.StdIn */
+    ///// end: section (2 of 2) of code duplicated from In to StdIn */
 
     /**
      * Closes this input stream.
@@ -581,7 +579,7 @@ public final class In {
      *
      * @param      filename the name of the file
      * @return     the integers in the file
-     * @deprecated Replaced by {@code new util.In(filename)}.{@link #readAllInts()}.
+     * @deprecated Replaced by {@code new In(filename)}.{@link #readAllInts()}.
      */
     @Deprecated
     public static int[] readInts(String filename) {
@@ -594,7 +592,7 @@ public final class In {
      *
      * @param      filename the name of the file
      * @return     the doubles in the file
-     * @deprecated Replaced by {@code new util.In(filename)}.{@link #readAllDoubles()}.
+     * @deprecated Replaced by {@code new In(filename)}.{@link #readAllDoubles()}.
      */
     @Deprecated
     public static double[] readDoubles(String filename) {
@@ -607,7 +605,7 @@ public final class In {
      *
      * @param      filename the name of the file
      * @return     the strings in the file
-     * @deprecated Replaced by {@code new util.In(filename)}.{@link #readAllStrings()}.
+     * @deprecated Replaced by {@code new In(filename)}.{@link #readAllStrings()}.
      */
     @Deprecated
     public static String[] readStrings(String filename) {
@@ -651,7 +649,7 @@ public final class In {
     }
 
     /**
-     * Unit tests the {@code util.In} data type.
+     * Unit tests the {@code In} data type.
      *
      * @param args the command-line arguments
      */

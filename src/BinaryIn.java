@@ -1,5 +1,3 @@
-package util;
-
 import java.io.BufferedInputStream;
 import java.io.File;
 import java.io.FileInputStream;
@@ -26,8 +24,8 @@ import java.util.NoSuchElementException;
  *  standard Java representations, in big-endian (most significant
  *  byte first) order.
  *  <p>
- *  The client should not intermix calls to {@code util.BinaryIn} with calls
- *  to {@code util.In}; otherwise unexpected behavior will result.
+ *  The client should not intermix calls to {@code BinaryIn} with calls
+ *  to {@code In}; otherwise unexpected behavior will result.
  *
  *  @author Robert Sedgewick
  *  @author Kevin Wayne
@@ -350,7 +348,7 @@ public final class BinaryIn {
     }
 
     /**
-     * Unit tests the {@code util.BinaryIn} data type.
+     * Unit tests the {@code BinaryIn} data type.
      * Reads the name of a file or URL (first command-line argument)
      * and writes it to a file (second command-line argument).
      *

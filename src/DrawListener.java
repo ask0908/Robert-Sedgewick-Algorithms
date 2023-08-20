@@ -1,5 +1,3 @@
-package util;
-
 /**
  *  <i>DrawListener</i>. This interface provides a basic capability for
  *  responding to keyboard in mouse events from {@link Draw} via callbacks.

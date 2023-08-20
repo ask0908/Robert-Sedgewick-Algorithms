@@ -1,5 +1,3 @@
-package util;
-
 /**
  *  <p><b>Overview.</b>
  *  The {@code StdStats} class provides static methods for computing

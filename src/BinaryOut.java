@@ -1,5 +1,3 @@
-package util;
-
 import java.io.BufferedOutputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -16,8 +14,8 @@ import java.net.Socket;
  *  <p>
  *  The client must {@code flush()} the output stream when finished writing bits.
  *  <p>
- *  The client should not intermix calls to {@code util.BinaryOut} with calls
- *  to {@code util.Out}; otherwise unexpected behavior will result.
+ *  The client should not intermix calls to {@code BinaryOut} with calls
+ *  to {@code Out}; otherwise unexpected behavior will result.
  *
  *  @author Robert Sedgewick
  *  @author Kevin Wayne

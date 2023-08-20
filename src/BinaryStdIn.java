@@ -1,5 +1,3 @@
-package util;
-
 import java.io.BufferedInputStream;
 import java.io.IOException;
 import java.util.NoSuchElementException;
@@ -16,8 +14,8 @@ import java.util.NoSuchElementException;
  *  standard Java representations, in big-endian (most significant
  *  byte first) order.
  *  <p>
- *  The client should not intermix calls to {@code util.BinaryStdIn} with calls
- *  to {@code util.StdIn} or {@code System.in};
+ *  The client should not intermix calls to {@code BinaryStdIn} with calls
+ *  to {@code StdIn} or {@code System.in};
  *  otherwise unexpected behavior will result.
  *
  *  @author Robert Sedgewick
@@ -29,7 +27,7 @@ public final class BinaryStdIn {
     private static BufferedInputStream in;  // input stream
     private static int buffer;              // one character buffer
     private static int n;                   // number of bits left in buffer
-    private static boolean isInitialized;   // has util.BinaryStdIn been called for first time?
+    private static boolean isInitialized;   // has BinaryStdIn been called for first time?
 
     // don't instantiate
     private BinaryStdIn() { }
@@ -65,7 +63,7 @@ public final class BinaryStdIn {
             isInitialized = false;
         }
         catch (IOException ioe) {
-            throw new IllegalStateException("Could not close util.BinaryStdIn", ioe);
+            throw new IllegalStateException("Could not close BinaryStdIn", ioe);
         }
     }
 
